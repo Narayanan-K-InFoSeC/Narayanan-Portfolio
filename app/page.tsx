@@ -290,7 +290,7 @@ const Home = () => {
                 <a href="https://www.linkedin.com/in/narayanan-k1/" className="text-gray-400 hover:text-blue-600 transform hover:scale-110 transition-all duration-200">
                   <LinkedInIcon size={22} className="sm:w-6 sm:h-6" />
                 </a>
-                <a href="mailto:narayanan.k.info@gmail.com" className="text-gray-400 hover:text-red-600 transform hover:scale-110 transition-all duration-200">
+                <a href="mailto:narayanan.k.infosec@gmail.com" className="text-gray-400 hover:text-red-600 transform hover:scale-110 transition-all duration-200">
                   <Mail size={22} className="sm:w-6 sm:h-6" />
                 </a>
               </div>
@@ -804,7 +804,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const mailtoUrl = `mailto:narayanan.k.info@gmail.com?subject=${encodeURIComponent(formData.subject || 'Contact Form Submission')}&body=${encodeURIComponent(
+      const mailtoUrl = `mailto:narayanan.k.infosec@gmail.com?subject=${encodeURIComponent(formData.subject || 'Contact Form Submission')}&body=${encodeURIComponent(
         `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
       )}`;
       
@@ -850,13 +850,13 @@ const Contact = () => {
             <h3 className="text-2xl font-bold text-gray-800 mb-6 sm:mb-8">Let&apos;s Connect</h3>
             
             <div className="space-y-5 sm:space-y-6 mb-6 sm:mb-8">
-              <a href="mailto:narayanan.k.info@gmail.com" className="flex items-center gap-4 group">
+              <a href="mailto:narayanan.k.infosec@gmail.com" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-red-100 to-orange-100 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200 shadow-md">
                   <Mail className="w-6 h-6 text-red-600" />
                 </div>
                 <div>
                   <p className="font-medium text-gray-800 text-sm sm:text-base">Email</p>
-                  <p className="text-gray-600 text-sm sm:text-base break-all">narayanan.k.info@gmail.com</p>
+                  <p className="text-gray-600 text-sm sm:text-base break-all">narayanan.k.infosec@gmail.com</p>
                 </div>
               </a>
               
@@ -991,7 +991,7 @@ const Footer = () => {
             <a href="https://www.linkedin.com/in/narayanan-k1/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-600 transition-all duration-200 transform hover:scale-110">
               <LinkedInIcon size={22} className="sm:w-6 sm:h-6" />
             </a>
-            <a href="mailto:narayanan.k.info@gmail.com" className="text-gray-400 hover:text-red-600 transition-all duration-200 transform hover:scale-110">
+            <a href="mailto:narayanan.k.infosec@gmail.com" className="text-gray-400 hover:text-red-600 transition-all duration-200 transform hover:scale-110">
               <Mail size={22} className="sm:w-6 sm:h-6" />
             </a>
           </div>
