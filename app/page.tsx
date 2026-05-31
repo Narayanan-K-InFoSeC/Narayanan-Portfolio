@@ -91,23 +91,6 @@ const Alert: React.FC<AlertProps> = ({ type, message, onClose }) => {
   );
 };
 
-// Tech Ticker
-const TechTicker = () => {
-  const tools = ['SonarQube', 'StackRox', 'Trivy', 'DefectDojo', 'Gitleaks', 'Terrascan', 'AWS', 'GCP', 'Azure', 'Burp Suite', 'OWASP ZAP', 'Dependency-Track', 'Kubernetes', 'Docker', 'CI/CD Pipelines', 'SAST', 'DAST', 'Penetration Testing'];
-  const doubled = [...tools, ...tools];
-  return (
-    <div className="w-full overflow-hidden py-3 border-y border-gray-100 bg-gray-50/80">
-      <div className="flex gap-8 animate-ticker whitespace-nowrap">
-        {doubled.map((tool, i) => (
-          <span key={i} className="inline-flex items-center gap-2 text-xs font-semibold text-gray-500 tracking-widest uppercase flex-shrink-0">
-            <span className="w-1 h-1 rounded-full bg-red-500 inline-block"></span>
-            {tool}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-};
 
 // Header
 const Header = () => {
@@ -151,7 +134,6 @@ const Header = () => {
             </div>
             <div className="flex items-center gap-2">
               <span className="font-bold text-gray-900 text-lg tracking-tight">Narayanan K</span>
-              <span className="hidden sm:inline-flex items-center px-2 py-0.5 bg-red-50 text-red-600 text-xs font-semibold rounded-md border border-red-100">DevSecOps</span>
             </div>
           </div>
 
@@ -360,15 +342,15 @@ const Home = () => {
         </div>
       </div>
 
-      <TechTicker />
-
-      <div className="flex justify-center py-6">
+      <div className="flex justify-center py-4 sm:py-6 lg:py-8">
         <button
           onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-          className="text-gray-300 hover:text-red-500 transition-colors duration-200 animate-bounce"
           aria-label="Scroll down"
+          className="flex flex-col items-center gap-1"
         >
-          <ChevronDown size={28} />
+          <div className="w-5 h-8 sm:w-6 sm:h-10 lg:w-7 lg:h-12 rounded-full border-2 border-red-500 flex justify-center pt-1 sm:pt-1.5 lg:pt-2">
+            <div className="w-0.5 h-1.5 sm:w-1 sm:h-2 lg:w-1 lg:h-3 bg-red-500 rounded-full animate-mouse-scroll" />
+          </div>
         </button>
       </div>
     </section>
@@ -810,9 +792,15 @@ export default function Page() {
           from { transform: translateX(0); }
           to { transform: translateX(-50%); }
         }
+        @keyframes mouse-scroll {
+          0% { transform: translateY(0); opacity: 1; }
+          50% { transform: translateY(6px); opacity: 0.3; }
+          100% { transform: translateY(0); opacity: 1; }
+        }
         .animate-slide-in { animation: slide-in 0.3s ease-out; }
         .animate-slide-down { animation: slide-down 0.25s ease-out; }
         .animate-ticker { animation: ticker 30s linear infinite; }
+        .animate-mouse-scroll { animation: mouse-scroll 1.5s ease-in-out infinite; }
         .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
         html { scroll-behavior: smooth; }
       `}</style>
